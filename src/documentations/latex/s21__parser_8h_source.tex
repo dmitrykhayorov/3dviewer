@@ -1,0 +1,47 @@
+\doxysection{s21\+\_\+parser.\+h}
+\hypertarget{s21__parser_8h_source}{}\label{s21__parser_8h_source}\index{back/s21\_parser.h@{back/s21\_parser.h}}
+\mbox{\hyperlink{s21__parser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CPP4\_3DVIEWER\_BACK\_PARSER\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CPP4\_3DVIEWER\_BACK\_PARSER\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <OpenGL/gl.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_point}{Point}}\ \{}
+\DoxyCodeLine{00016\ \ \ \textcolor{comment}{//\ GLfloat\ x;}}
+\DoxyCodeLine{00017\ \ \ \textcolor{comment}{//\ GLfloat\ y;}}
+\DoxyCodeLine{00018\ \ \ \textcolor{comment}{//\ GLfloat\ z;}}
+\DoxyCodeLine{00019\ \ \ GLfloat\ \mbox{\hyperlink{struct_point_a2ead830946c1ae6f2bc4755adbd1ab68}{mas}}[3];}
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{s21__parser_8h_a8daf0f5a63c61c9425f715d1b1c3c63d}{point}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s21_viewer_back}{S21ViewerBack}}\ \{}
+\DoxyCodeLine{00027\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s21_viewer_back_a683f72d41f431eeb161515faeae3af45}{SetFilename}}(std::string\ input\_string);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s21_viewer_back_a0505d75bb4bfddc50e0db4bbb1e4eaab}{ReadFile}}();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ std::vector<point>\ \mbox{\hyperlink{class_s21_viewer_back_ab7db3a0a9428bff6a04572e3b831e705}{GetVectorWithVertexes}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ std::vector<int>\ \mbox{\hyperlink{class_s21_viewer_back_a71fcf6cdb509abcec669555f9f7b3305}{GetVectorWithPolygons}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{class_s21_viewer_back_a61951502acf1bfcff87ac8dc18f4768e}{GetVertexesNum}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ std::string\ filename\_;\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ путь\ к\ файлу}}
+\DoxyCodeLine{00064\ \ \ std::vector<point>\ vertexes\_;\ \ \textcolor{comment}{//\ вершины}}
+\DoxyCodeLine{00065\ \ \ std::vector<int>\ polygons\_;\ \ \ \ \textcolor{comment}{//\ полигоны}}
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{size\_t}\ count\_vertexes\_;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ количество\ верщин}}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \ \ \mbox{\hyperlink{struct_point}{point}}\ GetVNumFromStr\_(std::string\ str);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{void}\ GetFNumFromStr\_(std::string\ str);}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
